@@ -110,7 +110,7 @@ require_once __DIR__.'../../../layout/public/nav.php';
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="../../../img/carousel-1.jpg" alt="Image">
+                    <img class="w-100" src="<?= asset('/img/carousel-1.jpg')?>" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h3 class="text-white mb-3 d-none d-sm-block">Best Pet Services</h3>
@@ -121,7 +121,7 @@ require_once __DIR__.'../../../layout/public/nav.php';
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="../../../img/carousel-2.jpg" alt="Image">
+                    <img class="w-100" src="<?= asset('/img/carousel-2.jpg')?>" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h3 class="text-white mb-3 d-none d-sm-block">Best Pet Services</h3>
@@ -334,62 +334,7 @@ require_once __DIR__.'../../../layout/public/nav.php';
             </div>
         </div>
     </div>
-    <!-- Blog End
-
-
-     Testimonial Start -->
-    <!-- <div class="container-fluid bg-light my-5 p-0 py-5">
-        <div class="container p-0 py-5">
-            <div class="d-flex flex-column text-center mb-5">
-                <h4 class="text-secondary mb-3">Testimonial</h4>
-                <h1 class="display-4 m-0">Our Client <span class="text-primary">Says</span></h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="bg-white mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="../../../img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
-                </div>
-                <div class="bg-white mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="../../../img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
-                </div>
-                <div class="bg-white mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="../../../img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
-                </div>
-                <div class="bg-white mx-3 p-4">
-                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="../../../img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
-                        <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Testimonial End -->
-
+   
 
     
 
@@ -407,7 +352,7 @@ require_once __DIR__.'../../../layout/public/nav.php';
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     
-    <script src="../../../lib/easing/easing.min.js"></script>
+    <script src="<?= asset('/lib/easing/easing.min.js')?>"></script>
     <script src="../../../lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../../../lib/tempusdominus/js/moment.min.js"></script>
     <script src="../../../lib/tempusdominus/js/moment-timezone.min.js"></script>

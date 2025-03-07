@@ -1,31 +1,36 @@
 <?php
 require_once 'models/Product.php';
 require_once 'controllers/Controller.php';
+
 class ProductController extends Controller
 {
-
     public function index()
     {
-        $role = 'admin';
-        if ($role == 'admin'){
-            $product = $this->model('product');
-            $products = $product->all();
-            $this->render('admin.products.index', [
-                'pageTitle' => 'All Products',
-                'products' => $products
-            ]);
-        }
-        else{
-            echo 'you are not authorized';
-        }
+        $product = $this->model('product');
+        $products = $product->all();
+        $this->render('public.products.shoping', [
+            'pageTitle' => 'All Products',
+            'products' => $products
+        ]);
     }
 
+    public function getByCategory($categoryId)
+    {
+        $product = $this->model('product');
+        $products = $product->where('category_id', $categoryId);
+        $this->render('public.products.categoryFood', [
+            'pageTitle' => 'Category Products',
+            'products' => $products
+        ]);
+    }
+    
     public function create()
     {
         $this->render('admin.products.create', ['title' => 'Create Product']);
     }
 
-    public function store(){
+    public function store()
+    {
         $name = $_POST['name'] ?? null;
         $price = $_POST['price'] ?? null;
         $description = $_POST['description'] ?? null;
@@ -37,9 +42,11 @@ class ProductController extends Controller
             'description' => 'required',
             'img_url' => 'required'
         ]);
+
         if (!empty($errors)) {
             dd($errors);
         }
+
         $product = $this->model('product');
         $product->create([
             'name' => $name,
@@ -47,13 +54,14 @@ class ProductController extends Controller
             'description' => $description,
             'img_url' => $image
         ]);
+
         $this->redirect('/products');
     }
+
     public function edit($id)
     {
         $product = $this->model('product');
         $product = $product->find($id);
-       // dd($product);
         $this->render('admin.products.edit', ['title' => 'Edit Product', 'product' => $product]);
     }
 
@@ -74,13 +82,15 @@ class ProductController extends Controller
         if (!empty($errors)) {
             dd($errors);
         }
+
         $product = $this->model('product');
-        $product->update($id,[
+        $product->update($id, [
             'name' => $name,
             'price' => $price,
             'description' => $description,
             'img_url' => $image
         ]);
+
         $this->redirect('/products');
     }
 
@@ -97,6 +107,4 @@ class ProductController extends Controller
         $product->delete($id);
         $this->redirect('/products');
     }
-
-
 }

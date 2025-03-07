@@ -5,7 +5,7 @@
   <title>Sign Up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../../form/style.css">
+  <link rel="stylesheet" href="<?= asset('/css/form.css') ?>">
 </head>
 <body>
   <div class="container">
@@ -43,7 +43,7 @@
                   </div>
                 <?php endif; ?>
 
-                <form action="../form/sign_up.php" method="post">
+                <form action="/signup" method="post">
                   <div class="mb-3">
                     <input name="name" type="text" class="form-control" placeholder="Your Name" required
                            pattern="[a-zA-Z ]{2,50}" title="2-50 letters only">
@@ -64,7 +64,7 @@
 
                 <div class="mt-4 text-center">
                   <p class="text-muted">Already have an account? 
-                    <a href="./sign_in.view.php" class="auth-link fw-semibold">Sign in</a>
+                    <a href="/login" class="auth-link fw-semibold">Sign in</a>
                   </p>
                 </div>
               </div>

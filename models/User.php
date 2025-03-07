@@ -1,13 +1,8 @@
 <?php
-require_once 'config/Database.php';
+require_once 'models/Model.php';
 
 class User extends Model
 {
 
-    public function getUsers()
-    {
-
-        return null;
-    }
 
 }

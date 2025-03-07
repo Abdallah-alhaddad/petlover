@@ -20,7 +20,8 @@
     <link href="../../../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../../../css/style.css" rel="stylesheet">
+    <link href="<?= asset('/css/style.css')?>" rel="stylesheet">
+    <link href="<?= asset('/css/styleShop.css')?>" rel="stylesheet">
  <style>
         .navbar {
             background-color: black; 
@@ -125,16 +126,16 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link <?= ($current_page == 'home.view.php') ? 'active' : '' ?>" href="../../../views/public/pages/home.view.php">Home</a>
+                    <a class="nav-link <?= ($current_page == 'home.view.php') ? 'active' : '' ?>" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= ($current_page == 'about.view.php') ? 'active' : '' ?>" href="../../../views/public/pages/about.view.php">About</a>
+                    <a class="nav-link <?= ($current_page == 'about.view.php') ? 'active' : '' ?>" href="/about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= ($current_page == 'shoping.view.php') ? 'active' : '' ?>" href="/shoping">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= ($current_page == 'contact.view.php') ? 'active' : '' ?>" href="../../../views/public/pages/contact.view.php">Contact</a>
+                    <a class="nav-link <?= ($current_page == 'contact.view.php') ? 'active' : '' ?>" href="/contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -146,9 +147,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
     </div>
 </nav>
-
-</html>
-    <!-- Navbar End -->
 
 
    

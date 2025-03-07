@@ -5,7 +5,7 @@
   <title>Sign In</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../../form/style.css">
+  <link rel="stylesheet" href="<?= asset('/css/form.css') ?>">
 </head>
 <body>
   <div class="container">
@@ -25,10 +25,10 @@
             <div class="col-lg-6">
               <div class="auth-content">
                 <h3 class="mb-4 fw-bold">Sign In to Continue</h3>
-                <?php if (isset($_GET['error'])): ?>
-                  <div class="alert alert-danger"><?= htmlspecialchars(urldecode($_GET['error'])) ?></div>
+                <?php if (isset($_SESSION['errors'])): ?>
+                  <div class="alert alert-danger"><?= $_SESSION['errors'] ?></div>
                 <?php endif; ?>
-                <form action="../form/sign_in.php" method="post">
+                <form action="/login" method="post">
                   <div class="mb-3">
                     <input name="email" type="email" class="form-control" placeholder="Email Address" required>
                   </div>
@@ -40,7 +40,7 @@
 
                 <div class="mt-4 text-center">
                   <p class="text-muted">New here? 
-                    <a href="./sign_up.view.php" class="auth-link fw-semibold">Create account</a>
+                    <a href="/signup" class="auth-link fw-semibold">Create account</a>
                   </p>
                 </div>
               </div>

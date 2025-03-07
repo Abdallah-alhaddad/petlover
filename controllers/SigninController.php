@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../models/sign_in.model.php";
 
-class SigninContr {
+class SigninController {
     private $model;
 
     public function __construct() {

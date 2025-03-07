@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../models/sign_up.model.php";
 
-class SignupContr {
+class SignUpController {
     private $model;
     private $name;
     private $email;
